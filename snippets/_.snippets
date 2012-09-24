@@ -1,5 +1,14 @@
 # Global snippets
 
+# todo-list snippets 
+snippet imp
+	[implement] ${1} [/implement]${2}
+snippet tod
+	[todo] ${1} [/todo]${2}
+snippet rev
+	[review] ${1} [/review]${2}
+snippet ref
+	[refactor] ${1} [/refactor]${2}
 # (c) holds no legal value ;)
 snippet c)
 	Copyright `&enc[:2] == "utf" ? "©" : "(c)"` `strftime("%Y")` ${1:`g:snips_author`}. All Rights Reserved.${2}
