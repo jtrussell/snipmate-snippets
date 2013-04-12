@@ -1,3 +1,6 @@
+# Misc
+snippet strict
+	'use strict';
 # Prototype
 snippet proto
 	${1:class_name}.prototype.${2:method_name} =
@@ -83,28 +86,67 @@ snippet dash
 	// -----------------------------------------------------
 # Get Elements
 snippet get
-	getElementsBy${1:TagName}( "${2}" )${3}
+	getElementsBy${1:TagName}( '${2}' )${3}
 # Get Element
 snippet gett
-	getElementBy${1:Id}( "${2}" )${3}
+	getElementBy${1:Id}( '${2}' )${3}
 # jQuery Select
 snippet jq
-	jQuery( "${1:selector}" )${2}
+	jQuery( '${1:selector}' )${2}
 # -------------------------------------
 # JAKE
 # -------------------------------------
 # desc
 snippet desc
-	desc( "${1}" )${2:;}${3}
+	desc( '${1}' )${2:;}${3}
 # task
 snippet task
-	task( "${1}", [${2}], function() {
+	task( '${1}', [${2}], function() {
 		${4:/*code*/}
 	})${3:;}${5}
 # -------------------------------------
 # NODEJS
 # -------------------------------------
 snippet log
-	console.log( ${1:"Hello World"} )${2:;}${3}
+	console.log( ${1:'Hello World'} )${2:;}${3}
+snippet dir
+	console.dir( ${1:obj}, ${2:false}, ${3:2} )${4:;}${5}
 snippet req
-	require( "${1}" )${2}
+	require( '${1}' )${2}
+# -------------------------------------
+# Grunt
+# -------------------------------------
+snippet gruntfile
+	module.exports = function( grunt ) {
+
+	  // Project configuration
+	  grunt.initConfig({
+	    pkg: grunt.file.readJSON( 'package.json' ),
+	    jshint: {
+	      options: {
+	        jshintrc: '.jshintrc'
+	      },
+	      gruntfile: ['Gruntfile.js']
+	    }
+	  });
+
+	  // Load plugins
+	  require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
+
+	  // Register task(s)
+	  grunt.registerTask( 'default', [
+	    'jshint'
+	  ]);
+
+	};
+# -------------------------------------
+# Jasmine
+# -------------------------------------
+snippet it
+	it( 'should ${1:<...>}', function() {
+	  ${2:<...>}
+	});
+snippet describe
+	describe( '${1:<...>}', function() {
+	  ${2:<...>}
+	});
