@@ -106,7 +106,7 @@ snippet doc_f
 	 * @return ${4:void}
 	 * @author `g:snips_author`
 	 */
-	${1}function ${2:func}( ${3:/*args*/} ) {
+	${1}function ${2:func}(${3:/*args*/}) {
 		${5:/* [todo /] */}
 	}
 # Header
@@ -161,11 +161,11 @@ snippet do
 		${2:// code... }
 	} while (${1:/* condition */});
 snippet if
-	if( ${1:/* condition */} ) {
+	if(${1:/* condition */}) {
 		${2:// code...}
 	}
 snippet ife
-	if( ${1:/* condition */} ) {
+	if(${1:/* condition */}) {
 		${2:// code...}
 	} else {
 		${3:// code...}
@@ -176,12 +176,12 @@ snippet else
 		${1:// code...}
 	}
 snippet elseif
-	elseif ( ${1:/* condition */} ) {
+	elseif (${1:/* condition */}) {
 		${2:// code...}
 	}
 # Tertiary conditional
 snippet t
-	$${1:retVal} = ( ${2:condition} ) ? ${3:a} : ${4:b};${5}
+	$${1:retVal} = (${2:condition}) ? ${3:a} : ${4:b};${5}
 snippet switch
 	switch($${1:variable}) {
 		case '${2:value}':
@@ -197,11 +197,11 @@ snippet case
 		${2:// code...}
 		break;${3}
 snippet for
-	for ( $${2:i} = count(${1:/*array*/}); $$2--; ) {
+	for ($${2:i} = count(${1:/*array*/}); $$2--;) {
 		${4: /*code*/}
 	}
 snippet foreach
-	foreach( $${1:variable} as $${2:key} ) {
+	foreach($${1:variable} as $${2:key}) {
 		${3:/*code*/}
 	}
 snippet fun
@@ -218,10 +218,10 @@ snippet dash
 snippet pre
 	echo "<pre>";${1}
 snippet dump
-	var_dump( $${1} );${2}
+	var_dump($${1});${2}
 snippet predump
 	echo "<pre>";
-	var_dump( $${1:/*var*/} );
+	var_dump($${1:/*var*/});
 	die();
 # ------------------------------------
 # Zend
@@ -251,6 +251,6 @@ snippet zgs
 	/**
 	 * @param ${3:field_type} $_$1
 	 */
-	public function set$2( $_$1 ) {
+	public function set$2($_$1) {
 		$this->_$1 = $_$1;
 	}${4}
