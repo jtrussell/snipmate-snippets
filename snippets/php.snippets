@@ -254,3 +254,22 @@ snippet zgs
 	public function set$2($_$1) {
 		$this->_$1 = $_$1;
 	}${4}
+# iVantage libs - (phpunit context)
+snippet clog
+	Console::log(${1:<msg>});
+snippet cinfo
+	Console::info(${1:<msg>});
+snippet cwarn
+	Console::warn(${1:<msg>});
+snippet cfatal
+	Console::fatal(${1:<msg>});
+snippet cerror
+	Console::error(${1:<msg>});
+snippet cdebug
+	Console::debug(${1:<msg>});
+snippet cdir
+	Console::dir(${1:<obj>});
+snippet cstart
+	Console::start(${1:__CLASS__, __FUNCTION__});
+snippet cfinish
+	Console::finish(${1:__CLASS__, __FUNCTION__});
