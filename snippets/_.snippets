@@ -260,3 +260,30 @@ snippet status ready-for-next-release
 	[#${1} status:ready for next release]
 snippet status ready-for-retest
 	[#${1} status:ready for retest]
+# DocBlocks
+snippet db package
+	/**
+	 * ${1:<summary>}
+	 *
+	 * ${2:<description>}
+	 *
+	 * @package ${3:<package-name>}
+	 * @copyright `strftime("%Y")` iVantage Health Analytics, Inc.
+	 */
+snippet db header
+	/**
+	 * ${1:<summary>}
+	 *
+	 * ${2:<description>}
+	 *
+	 * @param {${3:<type>}} ${4:<name>} ${5:<description>}
+	 * @return {${6:<type>}}
+	 */
+snippet db property
+	/**
+	 * ${1:<summary>}
+	 *
+	 * ${2:<description>}
+	 */
+snippet db param
+	@param {${1:<type>}} ${2:<name>} ${3:<description>}
