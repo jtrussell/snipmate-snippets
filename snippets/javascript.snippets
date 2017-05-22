@@ -3,7 +3,7 @@ snippet strict
 	'use strict'
 # Prototype
 snippet proto
-	${1:class_name}.prototype.${2:method_name} = function(${3:/*arg*/}) {
+	${1:class_name}.prototype.${2:method_name} = function (${3:/*arg*/}) {
 	  ${4:/*code*/}
 	}
 # Function
@@ -13,12 +13,12 @@ snippet fun
 	}
 # Closure
 snippet fc
-	(function(${2:that}) {
+	(function (${2:that}) {
 	  ${3:/*code*/}
 	}(${1:this}))
 # Anonymous Function
 snippet f
-	function(${1:/*args*/}) {
+	function (${1:/*args*/}) {
 	  ${2:/*code*/}
 	}
 # Lambda
@@ -28,12 +28,12 @@ snippet ()
 	}
 # if
 snippet if
-	if(${1:/*condition*/}) {
+	if (${1:/*condition*/}) {
 	  ${2:/*code*/}
 	}
 # if ... else
 snippet ife
-	if(${1:true}) {
+	if (${1:true}) {
 	  ${2}
 	} else {
 	  ${3}
@@ -43,7 +43,7 @@ snippet t
 	${1:/*condition*/} ? ${2:a} : ${3:b}
 # switch
 snippet switch
-	switch(${1:/*expression*/}) {
+	switch (${1:/*expression*/}) {
 	  case '${3:case}':
 	    ${4:/*code*/}
 	    break
@@ -57,32 +57,32 @@ snippet case
 	  break
 # for (...) {...} (Optimised for For-Loop)
 snippet for
-	for(${1:i} = ${2:/*iterable*/}.length; $1--;) {
+	for (${1:i} = ${2:/*iterable*/}.length; $1--;) {
 	  ${3:/*code*/}
 	}
 # for (...) {...} (Improved Native For-Loop)
 snippet forf
-	for(${1:i} = 0; $1 < ${2:/*count*/}; $1++) {
+	for (${1:i} = 0; $1 < ${2:/*count*/}; $1++) {
 	  ${3:/*code*/}
 	}
 # while (...) {...}
 snippet wh
-	while(${1:/*condition*/}) {
+	while (${1:/*condition*/}) {
 	  ${2:/*code*/}
 	}
 # do...while
 snippet do
 	do {
 	  ${2:/*code*/}
-	} while(${1:/*condition*/})
+	} while (${1:/*condition*/})
 # Object Method
 snippet :f
-	${1:method_name}: function(${2:attribute}) {
+	${1:method_name}: function (${2:attribute}) {
 	  ${4:/*code*/}
 	}${3:,}
 # setTimeout function
 snippet timeout
-	setTimeout(function() {
+	setTimeout(() => {
 	  ${2: /*code*/}
 	}, ${1:/*wait*/})
 # Get Elements
@@ -102,10 +102,10 @@ snippet req
 	require('${1}')
 # Jasmine/Mocha
 snippet it
-	it('should ${1:<...>}', function() {
-	  ${2:<...>}
+	it('should ${1:...}', () => {
+	  ${2:/*code*/}
 	})
 snippet describe
-	describe('${1:<...>}', function() {
-	  ${2:<...>}
+	describe('${1:Thing}', () => {
+	  ${2:/*code*/}
 	})
